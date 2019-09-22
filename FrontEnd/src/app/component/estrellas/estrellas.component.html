@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="container" style="padding: 50px;">
+        <div>
+            <button type="button" class="btn btn-primary btn-block" [routerLink]="['/estrellas/0']">Nueva
+                Estrella</button>
+        </div>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tamaño</th>
+                    <th scope="col">Accion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let estrella of estrellas">
+                    <th scope="row">{{estrella.id}}</th>
+                    <td>{{estrella.nombre}}</td>
+                    <td>{{estrella.tamanio}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" (click)="delete(estrella.id)">ELIMINAR</button>
+                        <button type="button" class="btn btn-warning"
+                            [routerLink]="['/estrellas/'+estrella.id]">EDITAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

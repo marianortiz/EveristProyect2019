@@ -1,0 +1,36 @@
+<div class="body">
+    <br>
+    <div class="container">
+        <div class="col-10 " >
+            <div class="input-group flex-nowrap"style="margin-top: 1cm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Nombre</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+                    aria-describedby="addon-wrapping" [(ngModel)]="planeta.nombre">
+            </div>
+            <div class="input-group flex-nowrap"style="margin-top: 1cm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Tamaño</span>
+                </div>
+                <input type="text" class="form-control" placeholder="tamaño" aria-label="tamaño"
+                    aria-describedby="addon-wrapping" [(ngModel)]="planeta.tamanio">
+            </div>
+            <div class="input-group flex-nowrap" style="margin-top: 1cm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Densidad</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Dencidad" aria-label="Decncidad"
+                    aria-describedby="addon-wrapping" [(ngModel)]="planeta.dencidad">
+            </div>
+            <div class="form-group" style="margin-top: 1cm">
+                <label for="exampleFormControlSelect1" style="color: beige">Estrellas</label>
+                <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="planeta.estrellaDTO.id">
+                    <option *ngFor="let estrella of estrellas" [selected]="estrella.id" [value]="estrella.id">
+                        {{estrella.nombre}}</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-success" (click)=save()>Guardar</button>
+        </div>
+    </div>
+</div>

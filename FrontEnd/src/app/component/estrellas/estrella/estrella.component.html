@@ -1,0 +1,22 @@
+<div class="body">
+    <br>
+    <div class="container" >
+        <div class="col-10">
+            <div class="input-group flex-nowrap" style="padding: 1.5cm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Nombre</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+                    aria-describedby="addon-wrapping" [(ngModel)]="estrella.nombre">
+            </div>
+            <div class="input-group flex-nowrap" style="padding: 1.5cm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="addon-wrapping">Tamaño</span>
+                </div>
+                <input type="text" class="form-control" placeholder="tamaño" aria-label="tamaño"
+                    aria-describedby="addon-wrapping" [(ngModel)]="estrella.tamanio">
+            </div>
+            <button type="button" class="btn btn-success " (click)=save()>Guardar</button>
+        </div>
+    </div>
+</div>
